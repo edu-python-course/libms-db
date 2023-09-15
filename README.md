@@ -4,7 +4,25 @@
 
 [//]: # (todo: ER diagram and structure description)
 
-[//]: # (todo: getting started)
+## Getting started
+
+**Prerequisites**
+
+- PostgreSQL server is available
+- PostgreSQl client is available
+
+This repository comes with all required queries. It is assumed you're using
+`libms` both as the postgres role and the database.
+
+### Database initialization
+
+Your first task is to create PostgreSQL role and database. You may find the
+initialization queries to do this in *docker/db/init.sql*. In case of using
+`docker compose` this query is already applied for the PostgreSQL server,
+and no additional actions required. In case you're trying to set up `libms`
+for some another PostgreSQL server, just run the queries from the *init.sql*
+file on the RDBMS server. You'll need permissions to create roles and databases
+to do this.
 
 ## Using Docker Compose
 
