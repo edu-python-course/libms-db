@@ -8,6 +8,7 @@
 DROP TABLE IF EXISTS borrow_request;
 DROP TABLE IF EXISTS book_author;
 DROP TABLE IF EXISTS book;
+DROP TABLE IF EXISTS revenue;
 DROP TABLE IF EXISTS customer;
 DROP TABLE IF EXISTS publisher;
 DROP TABLE IF EXISTS author;
@@ -28,7 +29,7 @@ CREATE TABLE author
     born    DATE CHECK (born <= CURRENT_DATE - INTERVAL '10 years')
 );
 ALTER TABLE author
-    OWNER TO libms;
+    OWNER TO libms; -- change table owner to "libms" user
 
 COMMENT ON TABLE author IS 'registered authors';
 COMMENT ON COLUMN author.id IS 'pkey - unique author identifier';
@@ -69,6 +70,26 @@ ALTER TABLE customer
 COMMENT ON TABLE customer IS 'regular library customers';
 COMMENT ON COLUMN customer.first_name IS 'cannot be an empty string';
 COMMENT ON COLUMN customer.last_name IS 'cannot be an empty string';
+
+-- label: revenue ddl
+-- todo: provide documentation on table
+/**
+  Revenue table
+  -------------
+ */
+CREATE TABLE revenue
+(
+    id          SERIAL PRIMARY KEY,
+    customer_id INTEGER REFERENCES customer,
+    amount      INTEGER NOT NULL CHECK (amount > 0),
+    date        DATE DEFAULT NOW()::DATE
+);
+ALTER TABLE revenue
+    OWNER TO libms;
+
+COMMENT ON TABLE revenue IS 'library revenue from the customers';
+COMMENT ON COLUMN revenue.amount IS 'income amount in coins';
+COMMENT ON COLUMN revenue.date IS 'payment day';
 
 -- label: book ddl
 -- todo: provide documentation on table
