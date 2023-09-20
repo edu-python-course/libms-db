@@ -2,8 +2,6 @@
 
 [//]: # (todo: brief project description)
 
-[//]: # (todo: ER diagram and structure description)
-
 ## UML Diagrams
 
 ```mermaid
@@ -19,7 +17,7 @@ erDiagram
         string country
     }
 
-    customer {
+    member {
         string first_name
         string last_name
     }
@@ -43,11 +41,11 @@ erDiagram
         date complete
     }
 
-    customer ||--o{ revenue: pays
-    customer ||--o{ borrow_request: creates
-    book ||--o{ borrow_request: requested
+    member ||--o{ revenue: pays
+    member }|--o{ borrow_request: creates
+    book }|--o{ borrow_request: requested
     author }|--|{ book: writes
-    publisher ||--o{ book: publishes
+    publisher ||--|{ book: publishes
 ```
 
 ## Getting started
