@@ -2,51 +2,7 @@
 
 [//]: # (todo: brief project description)
 
-## UML Diagrams
-
-```mermaid
-erDiagram
-    author {
-        string name
-        text summary
-        date born
-    }
-
-    publisher {
-        string name
-        string country
-    }
-
-    member {
-        string first_name
-        string last_name
-    }
-
-    revenue {
-        int amount
-        date date
-    }
-
-    book {
-        string title
-        string isbn
-        text summary
-        int published
-    }
-
-    borrow_request {
-        boolean approved
-        date borrow
-        date due
-        date complete
-    }
-
-    member ||--o{ revenue: pays
-    member }|--o{ borrow_request: creates
-    book }|--o{ borrow_request: requested
-    author }|--|{ book: writes
-    publisher ||--|{ book: publishes
-```
+[//]: # (todo: ER diagram and structure description)
 
 ## Getting started
 
