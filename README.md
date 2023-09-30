@@ -24,7 +24,7 @@ for some another PostgreSQL server, just run the queries from the *init.sql*
 file on the RDBMS server. You'll need permissions to create roles and databases
 to do this.
 
-## Using Docker Compose
+### Using Docker Compose
 
 Prerequisites:
 
@@ -54,7 +54,7 @@ docker compose up -d  # start all containers
 docker compose down   # stop all containers
 ```
 
-### Setting up env variables
+#### Setting up env variables
 
 Some settings declared in the compose file may be overriden by setting up
 environment variables. If you aren't familiar with them
@@ -67,7 +67,7 @@ SET VARIABLE=value     # for Windows users
 EXPORT VARIABLE=value  # for Unix users (Linux and MacOS)
 ```
 
-### PostgreSQL
+#### PostgreSQL
 
 The `db` service will run the PostgreSQL server container. It exposes 5432-port
 to the host machine, so you can use it just as if you got postgres running on
@@ -89,7 +89,7 @@ file by:
 docker compose up -d db
 ```
 
-### pgAdmin
+#### pgAdmin
 
 pgAdmin is one of the most famous PostgreSQL clients. From the version 4.x it
 uses a web-based UI running in your web browser. The pgAdmin container exposes
