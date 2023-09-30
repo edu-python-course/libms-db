@@ -1,0 +1,29 @@
+{
+  "id": 561039,
+  "num_rows": 1000,
+  "file_format": "csv",
+  "name": "book_author",
+  "include_header": true,
+  "columns": [
+    {
+      "name": "book_id",
+      "null_percentage": 0,
+      "type": "Dataset Column",
+      "dataset": "book",
+      "column": "id",
+      "selectionStyle": "sequential",
+      "distribution": null,
+      "formula": null
+    },
+    {
+      "name": "author_id",
+      "null_percentage": 0,
+      "type": "Dataset Column",
+      "dataset": "author",
+      "column": "id",
+      "selectionStyle": "weighted",
+      "distribution": null,
+      "formula": null
+    }
+  ]
+}

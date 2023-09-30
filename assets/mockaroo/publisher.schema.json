@@ -1,0 +1,69 @@
+{
+  "id": 561035,
+  "num_rows": 75,
+  "file_format": "csv",
+  "name": "publisher",
+  "include_header": true,
+  "columns": [
+    {
+      "name": "id",
+      "null_percentage": 0,
+      "type": "Row Number",
+      "formula": null
+    },
+    {
+      "name": "name",
+      "null_percentage": 0,
+      "type": "Company Name",
+      "formula": null
+    },
+    {
+      "name": "email",
+      "null_percentage": 0,
+      "type": "Email Address",
+      "formula": null
+    },
+    {
+      "name": "street",
+      "null_percentage": 0,
+      "type": "Street Address",
+      "formula": null
+    },
+    {
+      "name": "city",
+      "null_percentage": 0,
+      "type": "City",
+      "formula": null
+    },
+    {
+      "name": "state",
+      "null_percentage": 0,
+      "type": "State",
+      "onlyUSPlaces": false,
+      "formula": null
+    },
+    {
+      "name": "postal",
+      "null_percentage": 0,
+      "type": "Postal Code",
+      "formula": null
+    },
+    {
+      "name": "website",
+      "null_percentage": 0,
+      "type": "URL",
+      "includeProtocol": true,
+      "includeHost": true,
+      "includePath": false,
+      "includeQueryString": false,
+      "formula": null
+    },
+    {
+      "name": "phone",
+      "null_percentage": 0,
+      "type": "Phone",
+      "format": "+# (###) ###-####",
+      "formula": null
+    }
+  ]
+}

@@ -112,3 +112,19 @@ container is "postgresql-server". This connection is already defined in the
 connect manually.
 
 Note this may take some time to set up container and run internal server.
+
+## Date definition language (DDL)
+
+All schemas are defined using [Mockaroo](https://www.mockaroo.com) project
+and are public available via links below:
+
+- [author schema](https://www.mockaroo.com/e7c9c060)
+- [book schema](https://www.mockaroo.com/76947240)
+- [book-to-author relationship](https://www.mockaroo.com/ed78c070)
+- [book borrow requests](https://www.mockaroo.com/e2412b20)
+- [library members](https://www.mockaroo.com/25dd2fd0)
+- [publisher companies](https://www.mockaroo.com/4ff4ce30)
+- [library revenue](https://www.mockaroo.com/b8a021b0)
+
+Also, there are Mockaroo schemas backups within this repo located inside of
+[assets](./assets/mockaroo) directory.

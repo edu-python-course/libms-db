@@ -1,0 +1,104 @@
+{
+  "id": 561031,
+  "num_rows": 725,
+  "file_format": "csv",
+  "name": "book",
+  "include_header": true,
+  "columns": [
+    {
+      "name": "id",
+      "null_percentage": 0,
+      "type": "Row Number",
+      "formula": null
+    },
+    {
+      "name": "title",
+      "null_percentage": 0,
+      "type": "Words",
+      "min": 1,
+      "max": 5,
+      "formula": ""
+    },
+    {
+      "name": "synopsis",
+      "null_percentage": 0,
+      "type": "Paragraphs",
+      "min": 1,
+      "max": 1,
+      "formula": null
+    },
+    {
+      "name": "isbn",
+      "null_percentage": 0,
+      "type": "ISBN",
+      "formula": ""
+    },
+    {
+      "name": "publisher_id",
+      "null_percentage": 0,
+      "type": "Dataset Column",
+      "dataset": "publisher",
+      "column": "id",
+      "selectionStyle": "weighted",
+      "distribution": null,
+      "formula": null
+    },
+    {
+      "name": "publication_date",
+      "null_percentage": 0,
+      "type": "Datetime",
+      "min": "09/01/1939",
+      "max": "09/30/2013",
+      "format": "%Y-%m-%d",
+      "formula": null
+    },
+    {
+      "name": "genre",
+      "null_percentage": 0,
+      "type": "Custom List",
+      "values": [
+        "Mystery",
+        "Romance",
+        "Science Fiction",
+        "Fantasy",
+        "Thriller",
+        "Historical Fiction",
+        "Biography",
+        "Self-Help",
+        "Horror",
+        "Young Adult",
+        "Crime",
+        "Adventure",
+        "Poetry",
+        "Drama",
+        "Comedy"
+      ],
+      "selectionStyle": "random",
+      "distribution": null,
+      "formula": null
+    },
+    {
+      "name": "language",
+      "null_percentage": 0,
+      "type": "Language",
+      "formula": null
+    },
+    {
+      "name": "page_count",
+      "null_percentage": 0,
+      "type": "Number",
+      "min": 1,
+      "max": 1000,
+      "decimals": 0,
+      "formula": null
+    },
+    {
+      "name": "keywords",
+      "null_percentage": 0,
+      "type": "Words",
+      "min": 5,
+      "max": 10,
+      "formula": null
+    }
+  ]
+}
