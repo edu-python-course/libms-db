@@ -2,8 +2,6 @@
 
 [//]: # (todo: brief project description)
 
-[//]: # (todo: ER diagram and structure description)
-
 ## Getting started
 
 **Prerequisites**
@@ -128,3 +126,67 @@ and are public available via links below:
 
 Also, there are Mockaroo schemas backups within this repo located inside of
 [assets](./assets/mockaroo) directory.
+
+### UML diagram
+
+```mermaid
+erDiagram
+    member ||--o{ revenue: pays
+    member }|--o{ borrow_request: creates
+    book }|--o{ borrow_request: requested
+    author }|--|{ book: writes
+    publisher ||--|{ book: publishes
+
+    member {
+        string first_name
+        string last_name
+        date birthdate
+        date registered
+        email email
+        string phone
+    }
+
+    book {
+        string title
+        text synopsis
+        string isbn
+        int publisher_id
+        date publication_date
+        string genre
+        string language
+        int page_count
+        string keywords
+    }
+
+    author {
+        string first_name
+        string last_name
+        string country
+        date birthdate
+    }
+
+    publisher {
+        string name
+        email email
+        string street
+        string city
+        string state
+        string postal
+        url website
+        string phone
+    }
+
+    revenue {
+        int member_id
+        date revenue_date
+        int amount
+    }
+
+    borrow_request {
+        int book_id
+        int member_id
+        date borrow_date
+        date due_date
+        date complete_date
+    }
+```
