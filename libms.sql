@@ -95,8 +95,14 @@ ALTER TABLE book
 -- label: ddl-book_author
 CREATE TABLE book_author
 (
-    id SERIAL PRIMARY KEY
+    book_id   INTEGER REFERENCES book,
+    author_id INTEGER REFERENCES author,
+    UNIQUE (book_id, author_id)
 );
+
+COMMENT ON TABLE book_author IS 'books-to-authors relationship';
+COMMENT ON COLUMN book_author.book_id IS 'unique together with author_id';
+COMMENT ON COLUMN book_author.author_id IS 'unique together with book_id';
 
 ALTER TABLE book_author
     OWNER TO libms;
