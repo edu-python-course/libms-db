@@ -151,7 +151,7 @@ CREATE TABLE borrow_request
     member_id     INTEGER NOT NULL REFERENCES member,
     borrow_date   DATE    NOT NULL DEFAULT NOW(),
     due_date      DATE    NOT NULL DEFAULT NOW() + INTERVAL '2 weeks',
-    complete_date DATE    NOT NULL,
+    complete_date DATE,
     PRIMARY KEY (book_id, member_id, borrow_date)
 );
 
