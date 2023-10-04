@@ -1,9 +1,10 @@
 -- drop existing tables to avoid errors while re-creating them
+DROP TABLE IF EXISTS book_author;
 DROP TABLE IF EXISTS book;
 DROP TABLE IF EXISTS publisher;
 DROP TABLE IF EXISTS author;
-DROP TABLE IF EXISTS book_author;
 DROP TABLE IF EXISTS borrow_request;
+DROP TABLE IF EXISTS revenue;
 DROP TABLE IF EXISTS member;
 DROP TABLE IF EXISTS revenue;
 
