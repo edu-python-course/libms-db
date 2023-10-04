@@ -406,7 +406,6 @@ INSERT INTO publisher
 VALUES (75, 'Voolith', 'kodyvoie22@aboutads.info', '842 Havey Crossing', 'Zhanjia', '', '', 'http://omniture.com',
         '+86 (827) 511-1622');
 
-
 -- label: dml-author
 INSERT INTO author (first_name, last_name, country, birthdate)
 VALUES ('Letta', 'Casbolt', 'Poland', '1947-04-18'),
@@ -924,3 +923,16 @@ COPY revenue FROM '/var/lib/postgresql/assets/revenue.csv' DELIMITER ',' CSV HEA
 -- label: dml-borrow_request
 -- require superuser access or `pg_read_server_files` role priveleges
 COPY borrow_request FROM '/var/lib/postgresql/assets/borrow_request.csv' DELIMITER ',' CSV HEADER;
+
+-- label: clean-up-book_author
+CREATE TEMPORARY TABLE book_author_distinct AS
+SELECT DISTINCT book_id, author_id
+FROM book_author;
+
+TRUNCATE TABLE book_author; -- remove all rows from the "book_author" table
+ALTER TABLE book_author
+    ADD CONSTRAINT book_author_unique UNIQUE (book_id, author_id);
+
+INSERT INTO book_author
+SELECT *
+FROM book_author_distinct;
