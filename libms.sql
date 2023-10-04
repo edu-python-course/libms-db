@@ -162,7 +162,7 @@ COMMENT ON COLUMN borrow_request.borrow_date IS 'composite pk';
 
 ALTER TABLE borrow_request
     ADD CONSTRAINT
-        check_complete_date CHECK (complete_date <= borrow_date);
+        check_complete_date CHECK (complete_date >= borrow_date);
 
 ALTER TABLE borrow_request
     OWNER TO libms;
