@@ -144,8 +144,22 @@ ALTER TABLE revenue
 -- label: ddl-borrow_request
 CREATE TABLE borrow_request
 (
-    id SERIAL PRIMARY KEY
+    book_id       INTEGER NOT NULL REFERENCES book,
+    member_id     INTEGER NOT NULL REFERENCES member,
+    borrow_date   DATE    NOT NULL DEFAULT NOW(),
+    due_date      DATE    NOT NULL DEFAULT NOW() + interval('2 weeks'),
+    complete_date DATE    NOT NULL,
+    PRIMARY KEY (book_id, member_id, borrow_date)
 );
+
+COMMENT ON TABLE borrow_request IS 'book borrow requests';
+COMMENT ON COLUMN borrow_request.book_id IS 'book reference, composite pk';
+COMMENT ON COLUMN borrow_request.member_id IS 'member reference, composite pk';
+COMMENT ON COLUMN borrow_request.borrow_date IS 'composite pk';
+
+ALTER TABLE borrow_request
+    ADD CONSTRAINT
+        check_complete_date CHECK (complete_date <= borrow_date);
 
 ALTER TABLE borrow_request
     OWNER TO libms;
