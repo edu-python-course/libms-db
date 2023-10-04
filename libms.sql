@@ -6,7 +6,6 @@ DROP TABLE IF EXISTS author;
 DROP TABLE IF EXISTS borrow_request;
 DROP TABLE IF EXISTS revenue;
 DROP TABLE IF EXISTS member;
-DROP TABLE IF EXISTS revenue;
 
 -- label: ddl-publisher
 CREATE TABLE publisher
@@ -128,8 +127,16 @@ ALTER TABLE member
 -- label: ddl-revenue
 CREATE TABLE revenue
 (
-    id SERIAL PRIMARY KEY
+    id        SERIAL PRIMARY KEY,
+    member_id INTEGER NOT NULL REFERENCES member,
+    date      DATE    NOT NULL DEFAULT NOW(),
+    amount    INTEGER NOT NULL CHECK (amount > 0),
+    UNIQUE (member_id, date)
 );
+
+COMMENT ON TABLE revenue IS 'revenue (incomes)';
+COMMENT ON COLUMN revenue.member_id IS 'unique together with date, member ref';
+COMMENT ON COLUMN revenue.date IS 'unique together with member_id, revenue date';
 
 ALTER TABLE revenue
     OWNER TO libms;
