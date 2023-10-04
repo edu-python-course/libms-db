@@ -39,7 +39,7 @@ CREATE TABLE author
     CHECK ( LENGTH(last_name) > 0 )
 );
 
-COMMENT ON TABLE author IS '';
+COMMENT ON TABLE author IS 'authors registered in the library db';
 COMMENT ON COLUMN author.first_name IS 'non-zero length author''s first name';
 COMMENT ON COLUMN author.last_name IS 'non-zero length author''s last name';
 COMMENT ON COLUMN author.birthdate IS 'at least 10 years old';
