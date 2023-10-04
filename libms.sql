@@ -17,8 +17,8 @@ CREATE TABLE publisher
     city    VARCHAR(255),
     state   VARCHAR(255),
     postal  VARCHAR(16),
-    website VARCHAR(255),
-    phone   VARCHAR(32)
+    website VARCHAR(255) UNIQUE,
+    phone   VARCHAR(32) UNIQUE
 );
 
 COMMENT ON TABLE publisher IS 'publisher registered within a library db';
@@ -99,8 +99,7 @@ ALTER TABLE book
 CREATE TABLE book_author
 (
     book_id   INTEGER REFERENCES book,
-    author_id INTEGER REFERENCES author,
-    UNIQUE (book_id, author_id)
+    author_id INTEGER REFERENCES author
 );
 
 COMMENT ON TABLE book_author IS 'books-to-authors relationship';
