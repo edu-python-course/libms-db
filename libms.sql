@@ -30,8 +30,17 @@ ALTER TABLE publisher
 -- label: ddl-author
 CREATE TABLE author
 (
-    id SERIAL PRIMARY KEY
+    id         SERIAL PRIMARY KEY,
+    first_name VARCHAR(128) NOT NULL,
+    last_name  VARCHAR(128) NOT NULL,
+    country    VARCHAR(255),
+    CHECK ( LENGTH(first_name) > 0 ),
+    CHECK ( LENGTH(last_name) > 0 )
 );
+
+COMMENT ON TABLE author IS '';
+COMMENT ON COLUMN author.first_name IS 'non-zero length author''s first name';
+COMMENT ON COLUMN author.last_name IS 'non-zero length author''s last name';
 
 ALTER TABLE author
     OWNER TO libms;
