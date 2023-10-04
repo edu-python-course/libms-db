@@ -56,14 +56,14 @@ CREATE TABLE book
     isbn             VARCHAR(16),
     publisher_id     INTEGER      NOT NULL REFERENCES publisher,
     publication_date DATE,
-    language         VARCHAR(16),
+    language         VARCHAR(64),
     page_count       INTEGER,
     keywords         TEXT
 );
 
 COMMENT ON TABLE book IS 'available books';
 COMMENT ON COLUMN book.title IS 'non-zero length book''s title';
-COMMENT ON COLUMN book.keywords IS 'comma separated keywords';
+COMMENT ON COLUMN book.keywords IS 'whitespace separated keywords';
 
 ALTER TABLE book
     ADD CONSTRAINT check_title_length CHECK (LENGTH(title) > 0);
