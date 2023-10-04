@@ -10,8 +10,19 @@ DROP TABLE IF EXISTS borrow_request;
 -- label: ddl-publisher
 CREATE TABLE publisher
 (
-    id SERIAL PRIMARY KEY
+    id      SERIAL PRIMARY KEY,
+    name    VARCHAR(128) NOT NULL CHECK (LENGTH(name) > 0),
+    email   VARCHAR(255),
+    street  VARCHAR(255),
+    city    VARCHAR(255),
+    state   VARCHAR(255),
+    postal  VARCHAR(16),
+    website VARCHAR(255),
+    phone   VARCHAR(32)
 );
+
+COMMENT ON TABLE publisher IS 'publisher registered within a library db';
+COMMENT ON COLUMN publisher.name IS 'non-zero length publisher name';
 
 ALTER TABLE publisher
     OWNER TO libms;
