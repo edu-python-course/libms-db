@@ -34,6 +34,7 @@ CREATE TABLE author
     first_name VARCHAR(128) NOT NULL,
     last_name  VARCHAR(128) NOT NULL,
     country    VARCHAR(255),
+    birthdate  DATE CHECK (birthdate < NOW() - INTERVAL '10 years'),
     CHECK ( LENGTH(first_name) > 0 ),
     CHECK ( LENGTH(last_name) > 0 )
 );
@@ -41,6 +42,7 @@ CREATE TABLE author
 COMMENT ON TABLE author IS '';
 COMMENT ON COLUMN author.first_name IS 'non-zero length author''s first name';
 COMMENT ON COLUMN author.last_name IS 'non-zero length author''s last name';
+COMMENT ON COLUMN author.birthdate IS 'at least 10 years old';
 
 ALTER TABLE author
     OWNER TO libms;
