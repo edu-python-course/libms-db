@@ -10,7 +10,7 @@ DROP TABLE IF EXISTS member;
 -- label: ddl-publisher
 CREATE TABLE publisher
 (
-    id      SERIAL PRIMARY KEY,
+    id      INTEGER PRIMARY KEY,
     name    VARCHAR(128) NOT NULL CHECK (LENGTH(name) > 0),
     email   VARCHAR(255),
     street  VARCHAR(255),
@@ -49,7 +49,6 @@ ALTER TABLE author
 
 -- label: ddl-book
 CREATE TABLE book
-
 (
     id               SERIAL PRIMARY KEY,
     title            VARCHAR(255) NOT NULL,
