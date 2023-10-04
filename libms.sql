@@ -61,7 +61,32 @@ CREATE TABLE book
 );
 
 COMMENT ON TABLE book IS 'available books';
+COMMENT ON COLUMN book.title IS 'non-zero length book''s title';
 COMMENT ON COLUMN book.keywords IS 'comma separated keywords';
+
+ALTER TABLE book
+    ADD CONSTRAINT check_title_length CHECK (LENGTH(title) > 0);
+
+CREATE TYPE book_genre AS ENUM (
+    'Adventure',
+    'Biography',
+    'Comedy',
+    'Crime',
+    'Drama',
+    'Fantasy',
+    'Historical Fiction',
+    'Horror',
+    'Mystery',
+    'Poetry',
+    'Romance',
+    'Science Fiction',
+    'Self-Help',
+    'Thriller',
+    'Young Adult'
+    );
+
+ALTER TABLE book
+    ADD COLUMN genre book_genre;
 
 ALTER TABLE book
     OWNER TO libms;
