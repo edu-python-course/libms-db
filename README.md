@@ -125,7 +125,10 @@ and are public available via links below:
 - [library revenue](https://www.mockaroo.com/b8a021b0)
 
 Also, there are Mockaroo schemas backups within this repo located inside of
-[assets](./assets/mockaroo) directory.
+[assets/mockaroo](./assets/mockaroo) directory.
+
+Some of generated datasets are available in
+[assets/csv](./assets/csv) directory.
 
 ### UML diagram
 
