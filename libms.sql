@@ -909,3 +909,8 @@ VALUES ('Inigo', 'McGilmartin', NULL, '2022-11-12', 'imcgilmartin0@ycombinator.c
        ('Yuma', 'Welden', NULL, '2016-12-01', NULL, '+1 (214) 252-7281'),
        ('Lindi', 'Narducci', '1971-03-25', '2018-10-05', 'lnarducci9j@pagesperso-orange.fr', '+509 (956) 772-4384'),
        ('Agatha', 'Neal', '1976-10-20', '2016-08-17', 'aneal9k@mozilla.com', '+30 (899) 440-5155');
+
+-- label: dml-book
+-- require superuser access or `pg_read_server_files` role priveleges
+COPY book (id, title, synopsis, isbn, publisher_id, publication_date, genre, language, page_count,
+           keywords) FROM '/var/lib/postgresql/assets/books.csv' DELIMITER ',' CSV HEADER;
