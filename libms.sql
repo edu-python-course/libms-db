@@ -182,231 +182,229 @@ ALTER TABLE borrow_request
     OWNER TO libms;
 
 -- label: dml-publisher
-INSERT INTO publisher (id, name, email, street, city, state, postal, website, phone)
-VALUES (1, 'Layo', 'cnijs0@artisteer.com', '9 Luster Parkway', 'Hualongyan', '', '', 'https://dion.ne.jp',
-        '+86 (966) 806-7681');
-INSERT INTO publisher (id, name, email, street, city, state, postal, website, phone)
-VALUES (2, 'Brainlounge', 'mbrawn1@shinystat.com', '5 Lukken Court', 'Al Azraq ash Shamālī', '', '',
-        'https://webeden.co.uk', '+962 (810) 419-2320');
-INSERT INTO publisher
-VALUES (3, 'Jabbertype', 'lfabb2@accuweather.com', '66398 Dunning Pass', 'Tabant', '', '', 'http://blogger.com',
-        '+212 (214) 970-4217');
-INSERT INTO publisher (id, name, email, street, city, state, postal, website, phone)
-VALUES (4, 'Fivebridge', 'nkoomar3@unc.edu', '56 Mcguire Trail', 'Madīnat ‘Īsá', '', '', 'http://statcounter.com',
-        '+973 (553) 423-1278');
-INSERT INTO publisher (id, name, email, street, city, state, postal, website, phone)
-VALUES (5, 'Topdrive', 'jreynard4@netvibes.com', '40 Waxwing Point', 'Palatine', 'Illinois', '60078',
-        'https://arizona.edu', '+1 (847) 804-2999');
-INSERT INTO publisher
-VALUES (6, 'Zoombox', 'ehatwell5@spotify.com', '0152 Novick Street', 'Pasirtundun', '', '', 'https://nasa.gov',
-        '+62 (482) 932-6778');
-INSERT INTO publisher (id, name, email, street, city, state, postal, website, phone)
-VALUES (7, 'Plajo', 'ctogher6@noaa.gov', '40 Brickson Park Junction', 'Shaykh al Ḩadīd', '', '',
-        'https://fastcompany.com', '+963 (868) 543-5746');
-INSERT INTO publisher (id, name, email, street, city, state, postal, website, phone)
-VALUES (8, 'Brainverse', 'laudley7@noaa.gov', '6416 Nova Point', 'Linfen', '', '', 'https://google.ca',
-        '+86 (867) 511-6706');
-INSERT INTO publisher
-VALUES (9, 'Centidel', 'rkarpov8@blogs.com', '3573 Morning Pass', 'Khulm', '', '', 'http://de.vu',
-        '+93 (256) 850-7753');
-INSERT INTO publisher (id, name, email, street, city, state, postal, website, phone)
-VALUES (10, 'Kanoodle', 'dmixer9@vimeo.com', '08282 Schlimgen Hill', 'Trosa', 'Södermanland', '619 35',
-        'https://wsj.com', '+46 (387) 621-8396');
-INSERT INTO publisher (id, name, email, street, city, state, postal, website, phone)
-VALUES (11, 'Aivee', 'dheimesa@geocities.com', '0 Crowley Park', 'Carcarañá', '', '2138', 'http://simplemachines.org',
-        '+54 (370) 785-5748');
-INSERT INTO publisher
-VALUES (12, 'Einti', 'afisbeyb@icio.us', '8849 Loomis Hill', 'Binubusan', '', '2818', 'http://mapquest.com',
-        '+63 (953) 325-4118');
-INSERT INTO publisher (id, name, email, street, city, state, postal, website, phone)
-VALUES (13, 'Devpoint', 'ptretterc@marketwatch.com', '545 Loomis Crossing', 'Dongtang', '', '',
-        'https://squarespace.com', '+86 (676) 760-6783');
-INSERT INTO publisher (id, name, email, street, city, state, postal, website, phone)
-VALUES (14, 'Kazio', 'sjurekd@geocities.com', '7 Coolidge Place', 'Jiuxian', '', '', 'http://com.com',
-        '+86 (493) 734-5363');
-INSERT INTO publisher
-VALUES (15, 'Eamia', 'cbaudine@paypal.com', '5 Main Crossing', 'Langkaplancar', '', '', 'https://yellowpages.com',
-        '+62 (674) 648-4811');
-INSERT INTO publisher (id, name, email, street, city, state, postal, website, phone)
-VALUES (16, 'Rhyloo', 'nalyukinf@dyndns.org', '7668 Schlimgen Junction', 'El Asintal', '', '11009',
-        'https://zimbio.com', '+502 (839) 536-9325');
-INSERT INTO publisher (id, name, email, street, city, state, postal, website, phone)
-VALUES (17, 'Blognation', 'hlorraineg@shop-pro.jp', '909 Transport Avenue', 'Bukama', '', '', 'http://live.com',
-        '+242 (393) 918-9107');
-INSERT INTO publisher
-VALUES (18, 'Dynabox', 'nhabbeshawh@state.gov', '40747 Havey Lane', 'Dikwa', '', '', 'http://wordpress.org',
-        '+234 (277) 342-2220');
 INSERT INTO "publisher" ("id", "name", "email", "street", "city", "state", "postal", "website", "phone")
-VALUES (19, 'Devpulse', 'kbowmeri@umn.edu', '6 Sullivan Parkway', 'Tekstil’shchiki', '', '678126',
-        'https://squarespace.com', '+7 (643) 462-4546');
+VALUES (1, 'Voonder', 'agoodlad0@about.me', '03292 Judy Trail', 'Cagliari', 'Sardegna', '09124', 'https://upenn.edu',
+        '+39 (474) 668-0621');
 INSERT INTO publisher (id, name, email, street, city, state, postal, website, phone)
-VALUES (20, 'Jayo', 'mliebj@ow.ly', '8 Raven Drive', 'San José de Colinas', '', '', 'https://howstuffworks.com',
-        '+504 (367) 980-6835');
+VALUES (2, 'Voomm', 'drenbold1@plala.or.jp', '4 Straubel Alley', 'Camajuaní', '', '', 'https://unblog.fr',
+        '+53 (888) 309-9488');
 INSERT INTO publisher
-VALUES (21, 'Jaloo', 'fdilkesk@chicagotribune.com', '5 Susan Terrace', 'Bauta', '', '', 'https://exblog.jp',
-        '+53 (549) 466-0516');
+VALUES (3, 'Muxo', 'jbossingham2@ftc.gov', '0562 Badeau Hill', 'Hanjia', '', '', 'http://ca.gov', '+86 (658) 820-7449');
 INSERT INTO "publisher" ("id", "name", "email", "street", "city", "state", "postal", "website", "phone")
-VALUES (22, 'Yoveo', 'bkleinmintzl@icio.us', '7 Lillian Pass', 'Wolowona', '', '', 'https://e-recht24.de',
-        '+62 (731) 854-4777');
+VALUES (4, 'Skyndu', 'rkaye3@admin.ch', '579 Duke Junction', 'Labruge', 'Porto', '4485-296', 'http://webs.com',
+        '+351 (557) 359-5718');
 INSERT INTO publisher (id, name, email, street, city, state, postal, website, phone)
-VALUES (23, 'Livetube', 'mdespenserm@ucoz.ru', '5 Towne Lane', 'Capilla del Monte', '', '5184',
-        'https://acquirethisname.com', '+54 (249) 669-6400');
+VALUES (5, 'Skinix', 'glumbly4@goo.gl', '43 Judy Alley', 'Belz', '', '', 'http://ucoz.com', '+380 (886) 136-3544');
 INSERT INTO publisher
-VALUES (24, 'Janyx', 'mklaussenn@youtu.be', '964 Memorial Alley', 'Nsukka', '', '', 'https://reddit.com',
-        '+234 (486) 318-5944');
+VALUES (6, 'Fivespan', 'bbence5@who.int', '11 Parkside Circle', 'Lubenec', '', '439 83', 'http://theatlantic.com',
+        '+420 (119) 907-1545');
 INSERT INTO "publisher" ("id", "name", "email", "street", "city", "state", "postal", "website", "phone")
-VALUES (25, 'Talane', 'blanneno@bloglines.com', '8083 Pepper Wood Way', 'Opatów', '', '42-152',
-        'http://delicious.com', '+48 (460) 148-6473');
+VALUES (7, 'Edgeblab', 'kyaneev6@sohu.com', '0 Sage Street', 'Shimonoseki', '', '801-0885', 'http://hatena.ne.jp',
+        '+81 (197) 295-0674');
 INSERT INTO publisher (id, name, email, street, city, state, postal, website, phone)
-VALUES (26, 'Cogidoo', 'ptottonp@zimbio.com', '0567 Ryan Drive', 'Petrijevci', '', '31208', 'https://imageshack.us',
-        '+385 (453) 607-5839');
+VALUES (8, 'Kaymbo', 'ablyden7@va.gov', '82 Northfield Drive', 'Siruma', '', '4427', 'http://shop-pro.jp',
+        '+63 (475) 527-4031');
 INSERT INTO publisher
-VALUES (27, 'Skyble', 'mklaessonq@flavors.me', '31 Brentwood Road', 'Phùng', '', '', 'http://bravesites.com',
-        '+84 (913) 107-0837');
+VALUES (9, 'Topicstorm', 'ahoulden8@soundcloud.com', '47469 Stoughton Parkway', 'Mabini', '', '6313',
+        'https://sciencedaily.com', '+63 (883) 161-1659');
 INSERT INTO "publisher" ("id", "name", "email", "street", "city", "state", "postal", "website", "phone")
-VALUES (28, 'Topicstorm', 'dmusprattr@moonfruit.com', '59144 Arrowood Terrace', 'A’ershan', '', '',
-        'http://virginia.edu', '+86 (643) 124-7956');
+VALUES (10, 'Chatterbridge', 'tpenvarden9@yellowbook.com', '7 Dwight Junction', 'Cipari', '', '',
+        'https://sciencedirect.com', '+62 (153) 371-0059');
 INSERT INTO publisher (id, name, email, street, city, state, postal, website, phone)
-VALUES (29, 'Feednation', 'jbirchetts@blogspot.com', '042 Maple Junction', 'Sokoto', '', '', 'http://zdnet.com',
-        '+234 (659) 448-9867');
+VALUES (11, 'Devify', 'nstouthera@github.com', '0 Gale Parkway', 'Montpellier', 'Languedoc-Roussillon', '34294 CEDEX 5',
+        'http://youtube.com', '+33 (226) 849-7837');
 INSERT INTO publisher
-VALUES (30, 'Tagtune', 'dpateyt@woothemes.com', '7745 Porter Parkway', 'Zbarazh', '', '', 'https://fotki.com',
-        '+380 (397) 328-4492');
+VALUES (12, 'Eire', 'alonghornb@dell.com', '6 Golf Terrace', 'Linköping', 'Östergötland', '582 46', 'http://mysql.com',
+        '+46 (373) 387-9332');
 INSERT INTO "publisher" ("id", "name", "email", "street", "city", "state", "postal", "website", "phone")
-VALUES (31, 'Minyx', 'vmcanultyu@vinaora.com', '67 Spohn Crossing', 'Germiston', '', '1497', 'http://mediafire.com',
-        '+27 (305) 597-1936');
+VALUES (13, 'Midel', 'sbeastonc@ustream.tv', '22 Lighthouse Bay Way', 'Novoshakhtinsk', '', '346930',
+        'http://foxnews.com', '+7 (651) 491-0834');
 INSERT INTO publisher (id, name, email, street, city, state, postal, website, phone)
-VALUES (32, 'Rhyzio', 'hruprechtv@phoca.cz', '2 Carey Trail', 'Bailianhe', '', '', 'https://hc360.com',
-        '+86 (434) 130-7718');
+VALUES (14, 'Rhynoodle', 'aiveryd@elpais.com', '06 Lighthouse Bay Center', 'Kampokpok', '', '6536', 'https://opera.com',
+        '+63 (606) 880-2431');
 INSERT INTO publisher
-VALUES (33, 'Roodel', 'gkapelhoffw@tuttocitta.it', '155 8th Point', 'Yinjiacheng', '', '', 'https://mayoclinic.com',
-        '+86 (733) 536-6144');
+VALUES (15, 'Skinder', 'aakenheade@eepurl.com', '573 Hanson Pass', 'Eixo', 'Aveiro', '3800-766', 'https://who.int',
+        '+351 (659) 343-4356');
 INSERT INTO "publisher" ("id", "name", "email", "street", "city", "state", "postal", "website", "phone")
-VALUES (34, 'Layo', 'btallowinx@dedecms.com', '49709 Monument Center', 'Tầm Vu', '', '', 'https://unblog.fr',
-        '+84 (831) 663-3523');
+VALUES (16, 'Fliptune', 'cclacf@hexun.com', '01412 Logan Avenue', 'Ţahţā', '', '', 'http://ezinearticles.com',
+        '+20 (199) 642-8016');
 INSERT INTO publisher (id, name, email, street, city, state, postal, website, phone)
-VALUES (35, 'Kayveo', 'ryeelesy@noaa.gov', '63936 Old Gate Center', 'Lisičani', '', '6539', 'https://engadget.com',
-        '+389 (216) 970-7248');
+VALUES (17, 'Jazzy', 'sbonnickg@eventbrite.com', '5183 Westport Hill', 'Kudinovo', '', '249064', 'http://meetup.com',
+        '+7 (685) 809-9106');
 INSERT INTO publisher
-VALUES (36, 'Vitz', 'ggilphillanz@washington.edu', '95510 Jenifer Crossing', 'Lisovi Sorochyntsi', '', '',
-        'https://cnet.com', '+380 (501) 392-7600');
+VALUES (18, 'Quinu', 'bdheninh@npr.org', '69 Melrose Circle', 'Nuuk', '', '3900', 'https://amazonaws.com',
+        '+299 (926) 203-7728');
 INSERT INTO "publisher" ("id", "name", "email", "street", "city", "state", "postal", "website", "phone")
-VALUES (37, 'Dabtype', 'bdeane10@upenn.edu', '624 Jana Terrace', 'Zhongcheng', '', '', 'https://newyorker.com',
-        '+86 (104) 381-3156');
+VALUES (19, 'Jamia', 'apohli@spotify.com', '137 Leroy Hill', 'Oughterard', '', 'P72', 'http://cpanel.net',
+        '+353 (920) 253-4605');
 INSERT INTO publisher (id, name, email, street, city, state, postal, website, phone)
-VALUES (38, 'Thoughtbeat', 'dmenhci11@ask.com', '4607 Old Shore Alley', 'Ārān Bīdgol', '', '', 'https://1und1.de',
-        '+98 (854) 144-6861');
+VALUES (20, 'Katz', 'ldawdryj@cbc.ca', '92209 Meadow Ridge Junction', 'Dumingag', '', '7028', 'https://webs.com',
+        '+63 (918) 645-5193');
 INSERT INTO publisher
-VALUES (39, 'Cogidoo', 'dsambedge12@nih.gov', '77833 Logan Circle', 'Sumberpitu', '', '', 'https://bravesites.com',
-        '+62 (431) 788-8222');
+VALUES (21, 'Ooba', 'mrawlingk@taobao.com', '0 Delaware Pass', 'Stockholm', 'Stockholm', '114 29', 'https://hhs.gov',
+        '+46 (652) 317-2536');
 INSERT INTO "publisher" ("id", "name", "email", "street", "city", "state", "postal", "website", "phone")
-VALUES (40, 'Trudoo', 'sbroggelli13@tmall.com', '3785 Arizona Trail', 'Zubin Potok', '', '', 'http://apple.com',
-        '+383 (586) 254-8326');
+VALUES (22, 'Bubblebox', 'mwastiel@buzzfeed.com', '6201 Rigney Street', 'Sukasari', '', '', 'http://ucoz.ru',
+        '+62 (626) 884-2442');
 INSERT INTO publisher (id, name, email, street, city, state, postal, website, phone)
-VALUES (41, 'Skyba', 'fpattemore14@sphinn.com', '6 Bultman Hill', 'Kihangara', '', '', 'http://umich.edu',
-        '+255 (424) 146-5932');
+VALUES (23, 'Tekfly', 'bspellarm@seattletimes.com', '48660 Merry Place', 'Kyperoúnta', '', '', 'https://amazon.de',
+        '+357 (793) 785-5047');
 INSERT INTO publisher
-VALUES (42, 'Jaxspan', 'ggiggs15@about.me', '9 Browning Terrace', 'Phra Pradaeng', '', '10130',
-        'https://ycombinator.com', '+66 (925) 842-7551');
+VALUES (24, 'Riffpath', 'bmaclleesen@pen.io', '045 Mayfield Street', 'Šuto Orizare', '', '1040',
+        'http://stumbleupon.com', '+389 (570) 512-8636');
 INSERT INTO "publisher" ("id", "name", "email", "street", "city", "state", "postal", "website", "phone")
-VALUES (43, 'Divape', 'kdufton16@51.la', '8 Bay Park', 'Kota Kinabalu', 'Sabah', '88817', 'https://ed.gov',
-        '+60 (900) 327-1281');
+VALUES (25, 'Trunyx', 'lrubenovo@berkeley.edu', '956 Brown Terrace', 'Rzepiennik Strzyżewski', '', '33-163',
+        'https://nature.com', '+48 (678) 894-5706');
 INSERT INTO publisher (id, name, email, street, city, state, postal, website, phone)
-VALUES (44, 'Bluejam', 'dtadlow17@sina.com.cn', '3923 Leroy Drive', 'Planovskoye', '', '361222',
-        'http://buzzfeed.com', '+7 (927) 397-6779');
+VALUES (26, 'Snaptags', 'ahakonssonp@wired.com', '41 Artisan Way', 'Padre Bernardo', '', '73700-000',
+        'https://chronoengine.com', '+55 (285) 320-8874');
 INSERT INTO publisher
-VALUES (45, 'Devpulse', 'pllop18@yahoo.co.jp', '55 4th Trail', 'Riverton', '', '9847', 'http://4shared.com',
-        '+64 (795) 522-2122');
+VALUES (27, 'Bluezoom', 'btallmanq@nih.gov', '52 Delladonna Terrace', 'Jiaoxiyakou', '', '', 'https://tripadvisor.com',
+        '+86 (826) 825-5146');
 INSERT INTO "publisher" ("id", "name", "email", "street", "city", "state", "postal", "website", "phone")
-VALUES (46, 'Mybuzz', 'gnorwell19@nifty.com', '745 Lerdahl Plaza', 'Vårby', 'Stockholm', '143 42',
-        'https://hugedomains.com', '+46 (292) 401-2153');
+VALUES (28, 'Ozu', 'tknotonr@buzzfeed.com', '78 Eagan Trail', 'Smyga', '', '', 'https://prlog.org',
+        '+380 (883) 262-5163');
 INSERT INTO publisher (id, name, email, street, city, state, postal, website, phone)
-VALUES (47, 'Shufflester', 'fblouet1a@tiny.cc', '796 Vidon Lane', 'Sofifi', '', '', 'https://cisco.com',
-        '+62 (635) 679-3764');
+VALUES (29, 'Tagopia', 'mpolkinghornes@hao123.com', '40 Dapin Hill', 'Metsemotlhaba', '', '', 'https://php.net',
+        '+267 (133) 802-9035');
 INSERT INTO publisher
-VALUES (48, 'Skibox', 'dfarquar1b@unesco.org', '1526 Trailsway Avenue', 'Sumber Tengah', '', '', 'https://yahoo.com',
-        '+62 (464) 341-2169');
+VALUES (30, 'DabZ', 'mnegust@rambler.ru', '1 Mosinee Drive', 'Varberg', 'Halland', '432 30', 'https://woothemes.com',
+        '+46 (285) 447-4887');
 INSERT INTO "publisher" ("id", "name", "email", "street", "city", "state", "postal", "website", "phone")
-VALUES (49, 'Lajo', 'rcamps1c@mapy.cz', '86869 Mockingbird Lane', 'Xiadu', '', '', 'https://google.fr',
-        '+86 (277) 203-6872');
+VALUES (31, 'Yozio', 'sclowneyu@google.pl', '775 Corben Park', 'Fushë-Bulqizë', '', '', 'http://fastcompany.com',
+        '+355 (342) 500-4954');
 INSERT INTO publisher (id, name, email, street, city, state, postal, website, phone)
-VALUES (50, 'Gevee', 'babernethy1d@cloudflare.com', '81831 Vidon Road', 'Phù Cát', '', '', 'http://mapy.cz',
-        '+84 (754) 464-9091');
+VALUES (32, 'Snaptags', 'ntarbornv@ask.com', '09569 Roth Parkway', 'Quebrada Canoa', '', '', 'http://army.mil',
+        '+507 (504) 810-8899');
 INSERT INTO publisher
-VALUES (51, 'Camido', 'mhanscom1e@sina.com.cn', '7 Northview Parkway', 'Al Fandaqūmīyah', '', '', 'https://sohu.com',
-        '+970 (603) 787-2088');
+VALUES (33, 'Zoomlounge', 'aleechmanw@typepad.com', '5 Lakeland Circle', 'Senovo', '', '8281', 'http://yale.edu',
+        '+386 (968) 178-7869');
 INSERT INTO "publisher" ("id", "name", "email", "street", "city", "state", "postal", "website", "phone")
-VALUES (52, 'Dynazzy', 'msalling1f@aboutads.info', '273 Bonner Way', 'Al ‘Azīzīyah', '', '', 'http://t.co',
-        '+218 (407) 937-2721');
+VALUES (34, 'Oyoloo', 'bgianellix@unblog.fr', '5396 Bartillon Point', 'Nangang', '', '', 'https://hc360.com',
+        '+86 (323) 254-3453');
 INSERT INTO publisher (id, name, email, street, city, state, postal, website, phone)
-VALUES (53, 'Zoomdog', 'jcapon1g@ebay.co.uk', '518 Arrowood Point', 'Aveleda', 'Porto', '4575-393',
-        'https://baidu.com', '+351 (139) 668-8097');
+VALUES (35, 'Babbleopia', 'vleyfieldy@google.pl', '66148 Nevada Center', 'Munturkaju', '', '',
+        'https://pagesperso-orange.fr', '+62 (483) 959-7896');
 INSERT INTO publisher
-VALUES (54, 'Dabtype', 'dbaccas1h@buzzfeed.com', '00 Grayhawk Parkway', 'Duqiao', '', '', 'http://cloudflare.com',
-        '+86 (991) 273-0023');
+VALUES (36, 'Abatz', 'egarfitz@cmu.edu', '9283 Lakewood Gardens Park', 'Japeri', '', '26400-000',
+        'https://slideshare.net', '+55 (272) 546-1238');
 INSERT INTO "publisher" ("id", "name", "email", "street", "city", "state", "postal", "website", "phone")
-VALUES (55, 'Zoombeat', 'sellcome1i@wix.com', '327 Harper Plaza', 'Hendala', '', '11830', 'http://barnesandnoble.com',
-        '+94 (962) 303-7692');
+VALUES (37, 'Skipfire', 'bdouch10@hp.com', '8481 Holmberg Crossing', 'Kambove', '', '', 'https://howstuffworks.com',
+        '+242 (662) 485-7627');
 INSERT INTO publisher (id, name, email, street, city, state, postal, website, phone)
-VALUES (56, 'Mita', 'alott1j@nytimes.com', '1 Farmco Road', 'Ambulong', '', '5615', 'http://odnoklassniki.ru',
-        '+63 (700) 430-6539');
+VALUES (38, 'Izio', 'crawdales11@phoca.cz', '9 Algoma Trail', 'Swindon', 'England', 'SN1', 'http://behance.net',
+        '+44 (913) 647-8496');
 INSERT INTO publisher
-VALUES (57, 'Babbleset', 'pmacbrearty1k@bizjournals.com', '89 Hagan Lane', 'Talisayan', '', '9012', 'https://hud.gov',
-        '+63 (382) 511-9777');
+VALUES (39, 'Oloo', 'ksturley12@samsung.com', '6 Melby Street', 'Chýnov', '', '391 55', 'http://ihg.com',
+        '+420 (863) 727-6412');
 INSERT INTO "publisher" ("id", "name", "email", "street", "city", "state", "postal", "website", "phone")
-VALUES (58, 'Brainverse', 'crhucroft1l@illinois.edu', '606 Shelley Terrace', 'Sezemice', '', '533 04',
-        'https://amazon.com', '+420 (143) 146-8409');
+VALUES (40, 'Dynabox', 'dnavarro13@photobucket.com', '3732 Lakeland Place', 'Changlin', '', '',
+        'https://nationalgeographic.com', '+86 (995) 402-6458');
 INSERT INTO publisher (id, name, email, street, city, state, postal, website, phone)
-VALUES (59, 'Twinte', 'ryurkevich1m@wikimedia.org', '11242 Ridgeview Terrace', 'Am Djarass', '', '',
-        'http://vimeo.com', '+235 (937) 168-7090');
+VALUES (41, 'Dynabox', 'lcastille14@histats.com', '24 Hauk Pass', 'Emiliano Zapata', 'Oaxaca', '71836',
+        'http://issuu.com', '+52 (678) 879-7874');
 INSERT INTO publisher
-VALUES (60, 'Pixoboo', 'drelfe1n@pinterest.com', '27095 1st Hill', 'Coquitlam', 'British Columbia', 'V3B',
-        'http://bbb.org', '+1 (408) 118-2412');
+VALUES (42, 'Twinte', 'rdoerffer15@blogs.com', '09169 Superior Terrace', 'Lidingö', 'Stockholm', '181 77',
+        'https://studiopress.com', '+46 (323) 620-3410');
 INSERT INTO "publisher" ("id", "name", "email", "street", "city", "state", "postal", "website", "phone")
-VALUES (61, 'Rhybox', 'cchesswas1o@360.cn', '49 Dahle Street', 'Timmins', 'Ontario', 'P4P', 'http://dell.com',
-        '+1 (177) 739-7245');
+VALUES (43, 'Tagpad', 'kanderl16@intel.com', '2520 Kim Pass', 'Būr Safājah', '', '', 'http://bravesites.com',
+        '+20 (129) 708-3197');
 INSERT INTO publisher (id, name, email, street, city, state, postal, website, phone)
-VALUES (62, 'Yozio', 'krussi1p@typepad.com', '4211 Green Ridge Terrace', 'Sangali', '', '1154', 'https://soup.io',
-        '+63 (982) 402-2588');
+VALUES (44, 'Yombu', 'dmatyatin17@omniture.com', '451 Moulton Avenue', 'Napanee Downtown', 'Ontario', 'M5E',
+        'https://omniture.com', '+1 (734) 866-8853');
 INSERT INTO publisher
-VALUES (63, 'Viva', 'rcarbin1q@sakura.ne.jp', '43623 Bunker Hill Drive', 'Cabiguan', '', '1144',
-        'http://scientificamerican.com', '+63 (187) 833-4477');
+VALUES (45, 'Realcube', 'kgirardot18@studiopress.com', '96 Delaware Hill', 'Shiogama', '', '987-0058',
+        'https://fda.gov', '+81 (667) 117-2851');
 INSERT INTO "publisher" ("id", "name", "email", "street", "city", "state", "postal", "website", "phone")
-VALUES (64, 'Babbleopia', 'adavidowsky1r@patch.com', '805 Dryden Trail', 'Georgīevka', '', '', 'http://google.com.au',
-        '+7 (857) 575-2877');
+VALUES (46, 'Plajo', 'jsawday19@lulu.com', '7734 Johnson Center', 'Rangxi', '', '', 'http://gravatar.com',
+        '+86 (575) 391-0541');
 INSERT INTO publisher (id, name, email, street, city, state, postal, website, phone)
-VALUES (65, 'Quinu', 'rblaxill1s@google.ru', '7 Cherokee Lane', 'Jianfeng', '', '', 'http://woothemes.com',
-        '+86 (999) 840-0857');
+VALUES (47, 'Rhyloo', 'rclimie1a@weebly.com', '9169 Bultman Hill', 'Stráž', '', '430 01', 'https://360.cn',
+        '+420 (832) 689-6199');
 INSERT INTO publisher
-VALUES (66, 'Npath', 'ebabalola1t@microsoft.com', '26271 Bobwhite Way', 'Kalkal Barat', '', '', 'https://pcworld.com',
-        '+62 (196) 408-6753');
+VALUES (48, 'Mynte', 'lbambridge1b@digg.com', '738 American Court', 'Wysoka', '', '89-320', 'https://mapy.cz',
+        '+48 (965) 561-5947');
 INSERT INTO "publisher" ("id", "name", "email", "street", "city", "state", "postal", "website", "phone")
-VALUES (67, 'Eidel', 'bweavill1u@cpanel.net', '0 Esker Road', 'Raposeira', 'Viseu', '5100-419',
-        'http://clickbank.net', '+351 (630) 294-8947');
+VALUES (49, 'Rhybox', 'mgawn1c@list-manage.com', '9418 East Avenue', 'Dubréka', '', '', 'https://free.fr',
+        '+224 (126) 965-1640');
 INSERT INTO publisher (id, name, email, street, city, state, postal, website, phone)
-VALUES (68, 'Brightbean', 'bmarflitt1v@g.co', '23 Barnett Drive', 'Zhangzhu', '', '', 'http://apple.com',
-        '+86 (199) 471-4247');
+VALUES (50, 'Shuffledrive', 'sblampied1d@wisc.edu', '577 Summer Ridge Park', 'Dasht-e Archī', '', '', 'http://nasa.gov',
+        '+93 (200) 503-2598');
 INSERT INTO publisher
-VALUES (69, 'Youbridge', 'aosinin1w@irs.gov', '7990 Evergreen Junction', 'Nirji', '', '', 'https://ustream.tv',
-        '+86 (368) 754-5878');
+VALUES (51, 'Shufflebeat', 'dlatour1e@stumbleupon.com', '1507 Village Green Hill', 'Västerås', 'Västmanland', '722 33',
+        'http://qq.com', '+46 (265) 404-9302');
 INSERT INTO "publisher" ("id", "name", "email", "street", "city", "state", "postal", "website", "phone")
-VALUES (70, 'Quire', 'ajahnisch1x@lycos.com', '90324 Eagle Crest Terrace', 'Saint-Laurent-du-Var',
-        'Provence-Alpes-Côte d''Azur', '06721 CEDEX', 'http://forbes.com', '+33 (350) 294-4715');
+VALUES (52, 'Vinder', 'rwidmoor1f@techcrunch.com', '27 Rockefeller Court', 'Derbent', '', '368608', 'http://wufoo.com',
+        '+7 (142) 803-3853');
 INSERT INTO publisher (id, name, email, street, city, state, postal, website, phone)
-VALUES (71, 'Thoughtbridge', 'nwoofinden1y@wired.com', '05 Continental Circle', 'Vermelha', 'Lisboa', '2550-523',
-        'https://w3.org', '+351 (865) 886-8518');
+VALUES (53, 'Zoombox', 'dfallis1g@ed.gov', '61839 Forest Dale Court', 'Shanghu', '', '', 'http://xing.com',
+        '+86 (428) 966-6643');
 INSERT INTO publisher
-VALUES (72, 'Eimbee', 'bspurdon1z@businessinsider.com', '7 Brickson Park Avenue', 'Jintun', '', '', 'http://phoca.cz',
-        '+86 (469) 267-2846');
+VALUES (54, 'Yakidoo', 'tseverwright1h@shinystat.com', '93683 Shasta Road', 'Haebaru', '', '904-2311',
+        'http://disqus.com', '+81 (246) 115-0447');
 INSERT INTO "publisher" ("id", "name", "email", "street", "city", "state", "postal", "website", "phone")
-VALUES (73, 'Riffwire', 'fiwaszkiewicz20@oakley.com', '61391 Miller Pass', 'Charlottesville', 'Virginia', '22908',
-        'https://cloudflare.com', '+1 (434) 643-0567');
+VALUES (55, 'Yombu', 'nlockey1i@kickstarter.com', '653 Gerald Plaza', 'Salima', '', '', 'https://nba.com',
+        '+265 (741) 265-3707');
 INSERT INTO publisher (id, name, email, street, city, state, postal, website, phone)
-VALUES (74, 'Voomm', 'ehoulison21@cnbc.com', '1726 Luster Road', 'Fufang', '', '', 'http://so-net.ne.jp',
-        '+86 (653) 888-4573');
+VALUES (56, 'Camido', 'kive1j@pagesperso-orange.fr', '5957 Nevada Parkway', 'Baishi', '', '', 'https://disqus.com',
+        '+86 (175) 447-5471');
 INSERT INTO publisher
-VALUES (75, 'Gigabox', 'bsuerz22@archive.org', '37319 Lukken Trail', 'Bungu', '', '', 'http://hubpages.com',
-        '+255 (642) 172-8416');
+VALUES (57, 'Oyoloo', 'regginton1k@state.gov', '3705 Golden Leaf Center', 'Khotsimsk', '', '', 'https://slate.com',
+        '+375 (980) 242-4646');
+INSERT INTO "publisher" ("id", "name", "email", "street", "city", "state", "postal", "website", "phone")
+VALUES (58, 'Mybuzz', 'vdunkinson1l@phpbb.com', '04858 Sheridan Lane', 'Curahklapa', '', '',
+        'https://huffingtonpost.com', '+62 (956) 496-2635');
+INSERT INTO publisher (id, name, email, street, city, state, postal, website, phone)
+VALUES (59, 'Voonyx', 'vpyne1m@last.fm', '15279 Eagle Crest Pass', 'Sundbyberg', 'Stockholm', '172 39',
+        'https://phoca.cz', '+46 (530) 518-5174');
+INSERT INTO publisher
+VALUES (60, 'Skyvu', 'tpope1n@hud.gov', '377 Gina Hill', 'Moca', '', '11902', 'http://mashable.com',
+        '+1 (586) 768-8805');
+INSERT INTO "publisher" ("id", "name", "email", "street", "city", "state", "postal", "website", "phone")
+VALUES (61, 'Vidoo', 'dargont1o@cdbaby.com', '60 Lakewood Gardens Pass', 'Sambongmulyo', '', '', 'https://bing.com',
+        '+62 (113) 845-2345');
+INSERT INTO publisher (id, name, email, street, city, state, postal, website, phone)
+VALUES (62, 'Bubblemix', 'ytroy1p@marriott.com', '207 Columbus Court', 'Bukui', '', '', 'https://youtu.be',
+        '+86 (989) 597-9648');
+INSERT INTO publisher
+VALUES (63, 'JumpXS', 'jensor1q@163.com', '34787 Hayes Center', 'Raszowa', '', '47-232', 'http://sakura.ne.jp',
+        '+48 (444) 405-2779');
+INSERT INTO "publisher" ("id", "name", "email", "street", "city", "state", "postal", "website", "phone")
+VALUES (64, 'Demizz', 'ahackney1r@godaddy.com', '340 Doe Crossing Alley', 'Eg', '', '', 'http://kickstarter.com',
+        '+976 (697) 900-2953');
+INSERT INTO publisher (id, name, email, street, city, state, postal, website, phone)
+VALUES (65, 'Tagchat', 'dsherman1s@shinystat.com', '4 Prairie Rose Court', 'Cibingbin', '', '', 'https://wikipedia.org',
+        '+62 (893) 441-1976');
+INSERT INTO publisher
+VALUES (66, 'Demizz', 'cchaffyn1t@google.com', '94401 Northport Avenue', 'Xiangcheng', '', '', 'https://dion.ne.jp',
+        '+86 (190) 415-1872');
+INSERT INTO "publisher" ("id", "name", "email", "street", "city", "state", "postal", "website", "phone")
+VALUES (67, 'LiveZ', 'tpeddar1u@51.la', '1447 Vahlen Terrace', 'Áyios Yeóryios', '', '', 'http://dropbox.com',
+        '+30 (560) 425-9756');
+INSERT INTO publisher (id, name, email, street, city, state, postal, website, phone)
+VALUES (68, 'Dablist', 'tbeden1v@nyu.edu', '71 Ruskin Parkway', 'Yessentukskaya', '', '357637', 'https://wufoo.com',
+        '+7 (727) 971-4965');
+INSERT INTO publisher
+VALUES (69, 'Lazz', 'dpilch1w@answers.com', '72 Lakewood Gardens Hill', 'Martin', '', '31500', 'https://godaddy.com',
+        '+385 (360) 668-2991');
+INSERT INTO "publisher" ("id", "name", "email", "street", "city", "state", "postal", "website", "phone")
+VALUES (70, 'Livefish', 'iarboine1x@nydailynews.com', '29 Main Alley', 'Taipa', '', '0420', 'http://examiner.com',
+        '+64 (897) 549-8224');
+INSERT INTO publisher (id, name, email, street, city, state, postal, website, phone)
+VALUES (71, 'DabZ', 'bweatherell1y@sun.com', '41 Elgar Pass', 'San Luis', '', '8511', 'https://sakura.ne.jp',
+        '+63 (940) 523-6892');
+INSERT INTO publisher
+VALUES (72, 'Eayo', 'pmayhow1z@exblog.jp', '44293 Derek Circle', 'Baizhang', '', '', 'http://hubpages.com',
+        '+86 (838) 522-4777');
+INSERT INTO "publisher" ("id", "name", "email", "street", "city", "state", "postal", "website", "phone")
+VALUES (73, 'Buzzshare', 'mfairlem20@pcworld.com', '0887 Mccormick Place', 'El Crucero', '', '', 'http://lulu.com',
+        '+505 (512) 407-4008');
+INSERT INTO publisher (id, name, email, street, city, state, postal, website, phone)
+VALUES (74, 'Dabshots', 'jcheltnam21@macromedia.com', '426 Magdeline Center', 'Bandar Seri Begawan', '', '',
+        'http://vk.com', '+673 (265) 335-7937');
+INSERT INTO publisher
+VALUES (75, 'Voolith', 'kodyvoie22@aboutads.info', '842 Havey Crossing', 'Zhanjia', '', '', 'http://omniture.com',
+        '+86 (827) 511-1622');
 
 
 -- label: dml-author
@@ -913,7 +911,7 @@ VALUES ('Inigo', 'McGilmartin', NULL, '2022-11-12', 'imcgilmartin0@ycombinator.c
 -- label: dml-book
 -- require superuser access or `pg_read_server_files` role priveleges
 COPY book (id, title, synopsis, isbn, publisher_id, publication_date, genre, language, page_count,
-           keywords) FROM '/var/lib/postgresql/assets/books.csv' DELIMITER ',' CSV HEADER;
+           keywords) FROM '/var/lib/postgresql/assets/book.csv' DELIMITER ',' CSV HEADER;
 
 -- label: dml-book_author
 -- require superuser access or `pg_read_server_files` role priveleges
@@ -925,4 +923,4 @@ COPY revenue FROM '/var/lib/postgresql/assets/revenue.csv' DELIMITER ',' CSV HEA
 
 -- label: dml-borrow_request
 -- require superuser access or `pg_read_server_files` role priveleges
-COPY borrow_request FROM '/var/lib/postgresql/assets/requests.csv' DELIMITER ',' CSV HEADER ;
+COPY borrow_request FROM '/var/lib/postgresql/assets/borrow_request.csv' DELIMITER ',' CSV HEADER;
