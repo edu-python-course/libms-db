@@ -67,6 +67,7 @@ COMMENT ON COLUMN book.keywords IS 'comma separated keywords';
 ALTER TABLE book
     ADD CONSTRAINT check_title_length CHECK (LENGTH(title) > 0);
 
+DROP TYPE IF EXISTS book_genre;
 CREATE TYPE book_genre AS ENUM (
     'Adventure',
     'Biography',
