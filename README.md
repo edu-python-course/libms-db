@@ -178,7 +178,7 @@ erDiagram
 
     revenue {
         int member_id
-        date revenue_date
+        date date
         int amount
     }
 

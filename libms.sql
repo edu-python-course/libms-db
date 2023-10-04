@@ -1,9 +1,9 @@
 -- drop existing tables to avoid errors while re-creating them
 DROP TABLE IF EXISTS book_author;
+DROP TABLE IF EXISTS borrow_request;
 DROP TABLE IF EXISTS book;
 DROP TABLE IF EXISTS publisher;
 DROP TABLE IF EXISTS author;
-DROP TABLE IF EXISTS borrow_request;
 DROP TABLE IF EXISTS revenue;
 DROP TABLE IF EXISTS member;
 
@@ -50,11 +50,11 @@ CREATE TABLE book
 
 (
     id               SERIAL PRIMARY KEY,
-    title            VARCHAR(255)                 NOT NULL,
+    title            VARCHAR(255) NOT NULL,
     synopsis         TEXT,
     isbn             VARCHAR(16),
-    publisher_id     INTEGER REFERENCES publisher NOT NULL,
-    publication_date DATE DEFAULT NOW(),
+    publisher_id     INTEGER      NOT NULL REFERENCES publisher,
+    publication_date DATE,
     language         VARCHAR(16),
     page_count       INTEGER,
     keywords         TEXT
@@ -85,6 +85,8 @@ CREATE TYPE book_genre AS ENUM (
     'Thriller',
     'Young Adult'
     );
+
+COMMENT ON TYPE book_genre IS 'registered book genres enumeration';
 
 ALTER TABLE book
     ADD COLUMN genre book_genre;
@@ -147,7 +149,7 @@ CREATE TABLE borrow_request
     book_id       INTEGER NOT NULL REFERENCES book,
     member_id     INTEGER NOT NULL REFERENCES member,
     borrow_date   DATE    NOT NULL DEFAULT NOW(),
-    due_date DATE NOT NULL DEFAULT NOW() + INTERVAL '2 weeks',
+    due_date      DATE    NOT NULL DEFAULT NOW() + INTERVAL '2 weeks',
     complete_date DATE    NOT NULL,
     PRIMARY KEY (book_id, member_id, borrow_date)
 );
