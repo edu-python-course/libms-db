@@ -110,8 +110,16 @@ ALTER TABLE book_author
 -- label: ddl-member
 CREATE TABLE member
 (
-    id SERIAL PRIMARY KEY
+    id         SERIAL PRIMARY KEY,
+    first_name VARCHAR(64) NOT NULL CHECK (LENGTH(first_name) > 0),
+    last_name  VARCHAR(64) NOT NULL CHECK (LENGTH(last_name) > 0),
+    birthdate  DATE,
+    registered DATE DEFAULT NOW(),
+    email      VARCHAR(255),
+    phone      VARCHAR(32)
 );
+
+COMMENT ON TABLE member IS 'library registered members';
 
 ALTER TABLE member
     OWNER TO libms;
