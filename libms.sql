@@ -914,3 +914,15 @@ VALUES ('Inigo', 'McGilmartin', NULL, '2022-11-12', 'imcgilmartin0@ycombinator.c
 -- require superuser access or `pg_read_server_files` role priveleges
 COPY book (id, title, synopsis, isbn, publisher_id, publication_date, genre, language, page_count,
            keywords) FROM '/var/lib/postgresql/assets/books.csv' DELIMITER ',' CSV HEADER;
+
+-- label: dml-book_author
+-- require superuser access or `pg_read_server_files` role priveleges
+COPY book_author FROM '/var/lib/postgresql/assets/book_author.csv' DELIMITER ',' CSV;
+
+-- label: dml-revenue
+-- require superuser access or `pg_read_server_files` role priveleges
+COPY revenue FROM '/var/lib/postgresql/assets/revenue.csv' DELIMITER ',' CSV HEADER;
+
+-- label: dml-borrow_request
+-- require superuser access or `pg_read_server_files` role priveleges
+COPY borrow_request FROM '/var/lib/postgresql/assets/requests.csv' DELIMITER ',' CSV HEADER ;

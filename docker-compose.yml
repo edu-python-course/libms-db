@@ -14,7 +14,7 @@ services:
     volumes:
       - postgres:/var/lib/postgresql/data
       - ./docker/db:/docker-entrypoint-initdb.d:ro
-      - ./assets/csv/books.csv:/var/lib/postgresql/assets/books.csv:ro
+      - ./assets/csv:/var/lib/postgresql/assets:ro
 
   pgadmin:
     image: dpage/pgadmin4
