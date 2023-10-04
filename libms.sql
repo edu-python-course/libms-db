@@ -47,9 +47,21 @@ ALTER TABLE author
 
 -- label: ddl-book
 CREATE TABLE book
+
 (
-    id SERIAL PRIMARY KEY
+    id               SERIAL PRIMARY KEY,
+    title            VARCHAR(255)                 NOT NULL,
+    synopsis         TEXT,
+    isbn             VARCHAR(16),
+    publisher_id     INTEGER REFERENCES publisher NOT NULL,
+    publication_date DATE DEFAULT NOW(),
+    language         VARCHAR(16),
+    page_count       INTEGER,
+    keywords         TEXT
 );
+
+COMMENT ON TABLE book IS 'available books';
+COMMENT ON COLUMN book.keywords IS 'comma separated keywords';
 
 ALTER TABLE book
     OWNER TO libms;
