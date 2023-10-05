@@ -6,6 +6,7 @@ DROP TABLE IF EXISTS publisher;
 DROP TABLE IF EXISTS author;
 DROP TABLE IF EXISTS revenue;
 DROP TABLE IF EXISTS member;
+DROP TABLE IF EXISTS contact;
 
 -- label: ddl-publisher
 CREATE TABLE publisher
@@ -105,6 +106,21 @@ COMMENT ON COLUMN book_author.author_id IS 'unique together with book_id';
 ALTER TABLE book_author
     OWNER TO libms;
 
+-- label: ddl-contact
+CREATE TABLE contact
+(
+    id     SERIAL PRIMARY KEY,
+    street VARCHAR(128) NOT NULL,
+    postal VARCHAR(16)  NOT NULL,
+    email  VARCHAR(255),
+    phone  VARCHAR(32)
+);
+
+COMMENT ON TABLE contact IS 'members contacts';
+
+ALTER TABLE contact
+    OWNER TO libms;
+
 -- label: ddl-member
 CREATE TABLE member
 (
@@ -114,10 +130,12 @@ CREATE TABLE member
     birthdate  DATE,
     registered DATE DEFAULT NOW(),
     email      VARCHAR(255),
-    phone      VARCHAR(32)
+    phone      VARCHAR(32),
+    contact_id INTEGER     NOT NULL UNIQUE REFERENCES contact
 );
 
 COMMENT ON TABLE member IS 'library registered members';
+COMMENT ON COLUMN member.contact_id IS '1-to-1 relationship to contacts table';
 
 ALTER TABLE member
     OWNER TO libms;

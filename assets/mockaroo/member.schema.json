@@ -42,16 +42,13 @@
       "formula": null
     },
     {
-      "name": "email",
-      "null_percentage": 25,
-      "type": "Email Address",
-      "formula": null
-    },
-    {
-      "name": "phone",
+      "name": "contact_id",
       "null_percentage": 0,
-      "type": "Phone",
-      "format": "+# (###) ###-####",
+      "type": "Dataset Column",
+      "dataset": "address",
+      "column": "id",
+      "selectionStyle": "sequential",
+      "distribution": null,
       "formula": null
     }
   ]

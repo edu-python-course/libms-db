@@ -132,6 +132,7 @@ Also, there are Mockaroo schemas backups within this repo located inside of
 ```mermaid
 erDiagram
     member ||--o{ revenue: pays
+    member ||--|| contact: has_contact
     member }|--o{ borrow_request: creates
     book }|--o{ borrow_request: requested
     author }|--|{ book: writes
@@ -142,7 +143,12 @@ erDiagram
         string last_name
         date birthdate
         date registered
-        email email
+    }
+    
+    contact {
+        string street
+        string postal
+        string email
         string phone
     }
 
