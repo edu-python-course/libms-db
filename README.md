@@ -1,6 +1,16 @@
 # Library Management System - Database
 
-[//]: # (todo: brief project description)
+The `libms-db` project is a demonstrative and training-oriented initiative
+designed to offer hands-on experience with SQL. Focusing on the realm of
+library management, this project encompasses SQL scripts that detail
+the creation of tables pertinent to the system, as well as their subsequent
+population with mock data.
+
+**Table of Contents**
+
+-  [Getting started](#getting-started)
+   - [Database initialization](#database-initialization)
+   - [Using Docker Compose](#using-docker-compose) 
 
 ## Getting started
 
