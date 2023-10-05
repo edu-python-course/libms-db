@@ -743,15 +743,21 @@ VALUES (1, '715 Canary Center', '15191', NULL, NULL),
        (343, '1308 Rowland Court', '69613', NULL, '+55 (346) 864-0531'),
        (344, '356 Eliot Trail', '76753', 'bbtham9j@nature.com', '+81 (173) 651-7047'),
        (345, '83413 Dixon Circle', '43768', 'smattys9k@w3.org', NULL);
+-- update id sequence value
+SELECT SETVAL('contact_id_seq', (SELECT MAX(id) FROM contact));
 
 -- label: dml-member
 -- require superuser access or `pg_read_server_files` role priveleges
 COPY member FROM '/var/lib/postgresql/assets/member.csv' CSV HEADER;
+-- update id sequence value
+SELECT SETVAL('member_id_seq', (SELECT MAX(id) FROM member));
 
 -- label: dml-book
 -- require superuser access or `pg_read_server_files` role priveleges
 COPY book (id, title, synopsis, isbn, publisher_id, publication_date, genre, language, page_count,
            keywords) FROM '/var/lib/postgresql/assets/book.csv' DELIMITER ',' CSV HEADER;
+-- update id sequence value
+SELECT SETVAL('book_id_seq', (SELECT MAX(id) FROM book));
 
 -- label: dml-book_author
 -- require superuser access or `pg_read_server_files` role priveleges
@@ -760,12 +766,16 @@ COPY book_author FROM '/var/lib/postgresql/assets/book_author.csv' DELIMITER ','
 -- label: dml-revenue
 -- require superuser access or `pg_read_server_files` role priveleges
 COPY revenue FROM '/var/lib/postgresql/assets/revenue.csv' DELIMITER ',' CSV HEADER;
+-- update id sequence value
+SELECT SETVAL('revenue_id_seq', (SELECT MAX(id) FROM revenue));
 
 -- label: dml-borrow_request
 -- require superuser access or `pg_read_server_files` role priveleges
 COPY borrow_request FROM '/var/lib/postgresql/assets/borrow_request.csv' DELIMITER ',' CSV HEADER;
 
 -- label: clean-up-book_author
+-- temporary tables are dropped at the end of the session (when it is closed)
+DROP TABLE IF EXISTS book_author_distinct;
 CREATE TEMPORARY TABLE book_author_distinct AS
 SELECT DISTINCT book_id, author_id
 FROM book_author;
