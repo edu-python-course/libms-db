@@ -12,8 +12,6 @@ population with mock data.
    - [Database initialization](#database-initialization)
    - [Using Docker Compose](#using-docker-compose) 
 
-[//]: # (todo: ER diagram and structure description)
-
 ## Getting started
 
 **Prerequisites**
@@ -122,3 +120,85 @@ container is "postgresql-server". This connection is already defined in the
 connect manually.
 
 Note this may take some time to set up container and run internal server.
+
+## Date definition language (DDL)
+
+All schemas are defined using [Mockaroo](https://www.mockaroo.com) project
+and are public available via links below:
+
+- [author schema](https://www.mockaroo.com/e7c9c060)
+- [book schema](https://www.mockaroo.com/76947240)
+- [book-to-author relationship](https://www.mockaroo.com/ed78c070)
+- [book borrow requests](https://www.mockaroo.com/e2412b20)
+- [library members](https://www.mockaroo.com/25dd2fd0)
+- [publisher companies](https://www.mockaroo.com/4ff4ce30)
+- [library revenue](https://www.mockaroo.com/b8a021b0)
+
+Also, there are Mockaroo schemas backups within this repo located inside of
+[assets](./assets/mockaroo) directory.
+
+### UML diagram
+
+```mermaid
+erDiagram
+    member ||--o{ revenue: pays
+    member ||--|| contact: has_contact
+    member }|--o{ borrow_request: creates
+    book }|--o{ borrow_request: requested
+    author }|--|{ book: writes
+    publisher ||--|{ book: publishes
+
+    member {
+        string first_name
+        string last_name
+        date birthdate
+        date registered
+    }
+    
+    contact {
+        string street
+        string postal
+        string email
+        string phone
+    }
+
+    book {
+        string title
+        text synopsis
+        string isbn
+        int publisher_id
+        date publication_date
+        string genre
+        string language
+        int page_count
+        string keywords
+    }
+
+    author {
+        string first_name
+        string last_name
+        string country
+        date birthdate
+    }
+
+    publisher {
+        string name
+        string website
+        string email
+        string phone
+    }
+
+    revenue {
+        int member_id
+        date date
+        int amount
+    }
+
+    borrow_request {
+        int book_id
+        int member_id
+        date borrow_date
+        date due_date
+        date complete_date
+    }
+```

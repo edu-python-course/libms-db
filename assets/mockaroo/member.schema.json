@@ -1,0 +1,55 @@
+{
+  "id": 561028,
+  "num_rows": 345,
+  "file_format": "csv",
+  "name": "member",
+  "include_header": true,
+  "columns": [
+    {
+      "name": "id",
+      "null_percentage": 0,
+      "type": "Row Number",
+      "formula": null
+    },
+    {
+      "name": "first_name",
+      "null_percentage": 0,
+      "type": "First Name",
+      "formula": null
+    },
+    {
+      "name": "last_name",
+      "null_percentage": 0,
+      "type": "Last Name",
+      "formula": null
+    },
+    {
+      "name": "birthdate",
+      "null_percentage": 15,
+      "type": "Datetime",
+      "min": "12/24/1958",
+      "max": "09/30/2015",
+      "format": "%Y-%m-%d",
+      "formula": null
+    },
+    {
+      "name": "registered",
+      "null_percentage": 0,
+      "type": "Datetime",
+      "min": "11/30/2013",
+      "max": "09/30/2023",
+      "format": "%Y-%m-%d",
+      "formula": null
+    },
+    {
+      "name": "contact_id",
+      "null_percentage": 0,
+      "type": "Dataset Column",
+      "dataset": "address",
+      "column": "id",
+      "selectionStyle": "sequential",
+      "distribution": null,
+      "formula": null
+    }
+  ]
+}
