@@ -1,6 +1,6 @@
 {
   "id": 561035,
-  "num_rows": 25,
+  "num_rows": 30,
   "file_format": "csv",
   "name": "publisher",
   "include_header": true,
