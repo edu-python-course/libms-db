@@ -8,9 +8,10 @@ population with mock data.
 
 **Table of Contents**
 
--  [Getting started](#getting-started)
-   - [Database initialization](#database-initialization)
-   - [Using Docker Compose](#using-docker-compose) 
+- [Getting started](#getting-started)
+    - [Database initialization](#database-initialization)
+    - [Using Docker Compose](#using-docker-compose)
+- [Database structure](#database-structure)
 
 ## Getting started
 
@@ -109,10 +110,9 @@ number if needed).
 
 The pre-defined credentials to connect pgAdmin are:
 
-| Option   | Value                         |
-|:---------|:------------------------------|
-| email    | pgadmin@edu-python-course.org |
-| password | pgadmin                       | 
+| Email                         | Password |
+|:------------------------------|:---------|
+| pgadmin@edu-python-course.org | pgadmin  | 
 
 While connecting to the PostgreSQL server via pgAdmin the alias for the db
 container is "postgresql-server". This connection is already defined in the
@@ -121,7 +121,7 @@ connect manually.
 
 Note this may take some time to set up container and run internal server.
 
-## Date definition language (DDL)
+## Database structure
 
 All schemas are defined using [Mockaroo](https://www.mockaroo.com) project
 and are public available via links below:
@@ -131,6 +131,7 @@ and are public available via links below:
 - [book-to-author relationship](https://www.mockaroo.com/ed78c070)
 - [book borrow requests](https://www.mockaroo.com/e2412b20)
 - [library members](https://www.mockaroo.com/25dd2fd0)
+- [members' contacts](https://www.mockaroo.com/33c20ad0)
 - [publisher companies](https://www.mockaroo.com/4ff4ce30)
 - [library revenue](https://www.mockaroo.com/b8a021b0)
 
@@ -156,7 +157,7 @@ erDiagram
         date birthdate
         date registered
     }
-    
+
     contact {
         string street
         string postal
