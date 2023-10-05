@@ -1,6 +1,6 @@
 {
   "id": 561031,
-  "num_rows": 725,
+  "num_rows": 623,
   "file_format": "csv",
   "name": "book",
   "include_header": true,
@@ -47,7 +47,7 @@
       "name": "publication_date",
       "null_percentage": 0,
       "type": "Datetime",
-      "min": "09/01/1939",
+      "min": "06/07/1981",
       "max": "09/30/2013",
       "format": "%Y-%m-%d",
       "formula": null

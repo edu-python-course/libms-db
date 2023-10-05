@@ -12,12 +12,8 @@ CREATE TABLE publisher
 (
     id      INTEGER PRIMARY KEY,
     name    VARCHAR(128) NOT NULL CHECK (LENGTH(name) > 0),
-    email   VARCHAR(255),
-    street  VARCHAR(255),
-    city    VARCHAR(255),
-    state   VARCHAR(255),
-    postal  VARCHAR(16),
     website VARCHAR(255) UNIQUE,
+    email   VARCHAR(255),
     phone   VARCHAR(32) UNIQUE
 );
 

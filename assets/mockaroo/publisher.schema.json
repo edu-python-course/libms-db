@@ -1,6 +1,6 @@
 {
   "id": 561035,
-  "num_rows": 75,
+  "num_rows": 25,
   "file_format": "csv",
   "name": "publisher",
   "include_header": true,
@@ -18,37 +18,6 @@
       "formula": null
     },
     {
-      "name": "email",
-      "null_percentage": 0,
-      "type": "Email Address",
-      "formula": null
-    },
-    {
-      "name": "street",
-      "null_percentage": 0,
-      "type": "Street Address",
-      "formula": null
-    },
-    {
-      "name": "city",
-      "null_percentage": 0,
-      "type": "City",
-      "formula": null
-    },
-    {
-      "name": "state",
-      "null_percentage": 0,
-      "type": "State",
-      "onlyUSPlaces": false,
-      "formula": null
-    },
-    {
-      "name": "postal",
-      "null_percentage": 0,
-      "type": "Postal Code",
-      "formula": null
-    },
-    {
       "name": "website",
       "null_percentage": 0,
       "type": "URL",
@@ -56,6 +25,12 @@
       "includeHost": true,
       "includePath": false,
       "includeQueryString": false,
+      "formula": null
+    },
+    {
+      "name": "email",
+      "null_percentage": 0,
+      "type": "Email Address",
       "formula": null
     },
     {

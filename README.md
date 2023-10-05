@@ -167,12 +167,8 @@ erDiagram
 
     publisher {
         string name
-        email email
-        string street
-        string city
-        string state
-        string postal
-        url website
+        string website
+        string email
         string phone
     }
 
