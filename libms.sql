@@ -129,8 +129,6 @@ CREATE TABLE member
     last_name  VARCHAR(64) NOT NULL CHECK (LENGTH(last_name) > 0),
     birthdate  DATE,
     registered DATE DEFAULT NOW(),
-    email      VARCHAR(255),
-    phone      VARCHAR(32),
     contact_id INTEGER     NOT NULL UNIQUE REFERENCES contact
 );
 
