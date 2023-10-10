@@ -1,0 +1,52 @@
+{
+  "id": 561030,
+  "num_rows": 150,
+  "file_format": "csv",
+  "name": "author",
+  "include_header": true,
+  "columns": [
+    {
+      "name": "id",
+      "null_percentage": 0,
+      "type": "Row Number",
+      "formula": null
+    },
+    {
+      "name": "first_name",
+      "null_percentage": 0,
+      "type": "First Name",
+      "formula": null
+    },
+    {
+      "name": "last_name",
+      "null_percentage": 0,
+      "type": "Last Name",
+      "formula": null
+    },
+    {
+      "name": "country",
+      "null_percentage": 0,
+      "type": "Country",
+      "countries": [
+        "Czech Republic",
+        "Estonia",
+        "Germany",
+        "Netherlands",
+        "Poland",
+        "United Kingdom",
+        "United States",
+        "Ukraine"
+      ],
+      "formula": null
+    },
+    {
+      "name": "birthdate",
+      "null_percentage": 0,
+      "type": "Datetime",
+      "min": "01/01/1900",
+      "max": "12/31/2006",
+      "format": "%Y-%m-%d",
+      "formula": null
+    }
+  ]
+}

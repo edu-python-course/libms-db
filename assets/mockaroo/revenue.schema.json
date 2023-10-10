@@ -1,0 +1,43 @@
+{
+  "id": 561040,
+  "num_rows": 1000,
+  "file_format": "csv",
+  "name": "revenue",
+  "include_header": true,
+  "columns": [
+    {
+      "name": "id",
+      "null_percentage": 0,
+      "type": "Row Number",
+      "formula": null
+    },
+    {
+      "name": "member_id",
+      "null_percentage": 0,
+      "type": "Dataset Column",
+      "dataset": "member",
+      "column": "id",
+      "selectionStyle": "weighted",
+      "distribution": null,
+      "formula": null
+    },
+    {
+      "name": "revenue_date",
+      "null_percentage": 0,
+      "type": "Datetime",
+      "min": "11/12/2013",
+      "max": "09/30/2023",
+      "format": "%Y-%m-%d",
+      "formula": null
+    },
+    {
+      "name": "amount",
+      "null_percentage": 0,
+      "type": "Number",
+      "min": 2500,
+      "max": 15000,
+      "decimals": 0,
+      "formula": null
+    }
+  ]
+}

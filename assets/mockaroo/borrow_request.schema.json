@@ -1,0 +1,56 @@
+{
+  "id": 561047,
+  "num_rows": 1000,
+  "file_format": "csv",
+  "name": "borrow_request",
+  "include_header": true,
+  "columns": [
+    {
+      "name": "book_id",
+      "null_percentage": 0,
+      "type": "Dataset Column",
+      "dataset": "book",
+      "column": "id",
+      "selectionStyle": "random",
+      "distribution": null,
+      "formula": null
+    },
+    {
+      "name": "member_id",
+      "null_percentage": 0,
+      "type": "Dataset Column",
+      "dataset": "member",
+      "column": "id",
+      "selectionStyle": "random",
+      "distribution": null,
+      "formula": null
+    },
+    {
+      "name": "borrow_date",
+      "null_percentage": 0,
+      "type": "Datetime",
+      "min": "11/30/2013",
+      "max": "09/30/2023",
+      "format": "%Y-%m-%d",
+      "formula": null
+    },
+    {
+      "name": "due_date",
+      "null_percentage": 0,
+      "type": "Datetime",
+      "min": "11/30/2013",
+      "max": "09/30/2023",
+      "format": "%Y-%m-%d",
+      "formula": "borrow_date + days(random(10, 30))"
+    },
+    {
+      "name": "complete_date",
+      "null_percentage": 0,
+      "type": "Datetime",
+      "min": "11/30/2013",
+      "max": "09/30/2023",
+      "format": "%Y-%m-%d",
+      "formula": "if date_diff('days', borrow_date, now()) <= 15 then null else borrow_date + days(random(5, 30))"
+    }
+  ]
+}
