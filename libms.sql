@@ -15,7 +15,7 @@ DROP TABLE IF EXISTS contact;
 CREATE TABLE publisher
 (
     id      INTEGER PRIMARY KEY,
-    name    VARCHAR(128) NOT NULL CHECK (LENGTH(name) > 0),
+    name    VARCHAR(128) NOT NULL CHECK (length(name) > 0),
     website VARCHAR(255) UNIQUE,
     email   VARCHAR(255),
     phone   VARCHAR(32) UNIQUE
@@ -34,9 +34,9 @@ CREATE TABLE author
     first_name VARCHAR(128) NOT NULL,
     last_name  VARCHAR(128) NOT NULL,
     country    VARCHAR(255),
-    birthdate  DATE CHECK (birthdate < NOW() - INTERVAL '10 years'),
-    CHECK ( LENGTH(first_name) > 0 ),
-    CHECK ( LENGTH(last_name) > 0 )
+    birthdate  DATE CHECK (birthdate < now() - INTERVAL '10 years'),
+    CHECK ( length(first_name) > 0 ),
+    CHECK ( length(last_name) > 0 )
 );
 
 COMMENT ON TABLE author IS 'authors registered in the library db';
@@ -66,10 +66,10 @@ COMMENT ON COLUMN book.title IS 'non-zero length book''s title';
 COMMENT ON COLUMN book.keywords IS 'whitespace separated keywords';
 
 ALTER TABLE book
-    ADD CONSTRAINT check_title_length CHECK (LENGTH(title) > 0);
+    ADD CONSTRAINT check_title_length CHECK (length(title) > 0);
 
-DROP TYPE IF EXISTS book_genre;
-CREATE TYPE book_genre AS ENUM (
+DROP TYPE IF EXISTS BOOK_GENRE;
+CREATE TYPE BOOK_GENRE AS ENUM (
     'Adventure',
     'Biography',
     'Comedy',
@@ -87,10 +87,10 @@ CREATE TYPE book_genre AS ENUM (
     'Young Adult'
     );
 
-COMMENT ON TYPE book_genre IS 'registered book genres enumeration';
+COMMENT ON TYPE BOOK_GENRE IS 'registered book genres enumeration';
 
 ALTER TABLE book
-    ADD COLUMN genre book_genre;
+    ADD COLUMN genre BOOK_GENRE;
 
 ALTER TABLE book
     OWNER TO libms;
@@ -128,10 +128,10 @@ ALTER TABLE contact
 CREATE TABLE member
 (
     id         SERIAL PRIMARY KEY,
-    first_name VARCHAR(64) NOT NULL CHECK (LENGTH(first_name) > 0),
-    last_name  VARCHAR(64) NOT NULL CHECK (LENGTH(last_name) > 0),
+    first_name VARCHAR(64) NOT NULL CHECK (length(first_name) > 0),
+    last_name  VARCHAR(64) NOT NULL CHECK (length(last_name) > 0),
     birthdate  DATE,
-    registered DATE DEFAULT NOW(),
+    registered DATE DEFAULT now(),
     contact_id INTEGER     NOT NULL UNIQUE REFERENCES contact
 );
 
@@ -146,7 +146,7 @@ CREATE TABLE revenue
 (
     id        SERIAL PRIMARY KEY,
     member_id INTEGER NOT NULL REFERENCES member,
-    date      DATE    NOT NULL DEFAULT NOW(),
+    date      DATE    NOT NULL DEFAULT now(),
     amount    INTEGER NOT NULL CHECK (amount > 0),
     UNIQUE (member_id, date)
 );
@@ -163,8 +163,8 @@ CREATE TABLE borrow_request
 (
     book_id       INTEGER NOT NULL REFERENCES book,
     member_id     INTEGER NOT NULL REFERENCES member,
-    borrow_date   DATE    NOT NULL DEFAULT NOW(),
-    due_date      DATE    NOT NULL DEFAULT NOW() + INTERVAL '2 weeks',
+    borrow_date   DATE    NOT NULL DEFAULT now(),
+    due_date      DATE    NOT NULL DEFAULT now() + INTERVAL '2 weeks',
     complete_date DATE,
     PRIMARY KEY (book_id, member_id, borrow_date)
 );
@@ -748,20 +748,20 @@ VALUES (1, '715 Canary Center', '15191', NULL, NULL),
        (344, '356 Eliot Trail', '76753', 'bbtham9j@nature.com', '+81 (173) 651-7047'),
        (345, '83413 Dixon Circle', '43768', 'smattys9k@w3.org', NULL);
 -- update id sequence value
-SELECT SETVAL('contact_id_seq', (SELECT MAX(id) FROM contact));
+SELECT setval('contact_id_seq', (SELECT max(id) FROM contact));
 
 -- label: dml-member
 -- require superuser access or `pg_read_server_files` role priveleges
 COPY member FROM '/var/lib/postgresql/assets/member.csv' CSV HEADER;
 -- update id sequence value
-SELECT SETVAL('member_id_seq', (SELECT MAX(id) FROM member));
+SELECT setval('member_id_seq', (SELECT max(id) FROM member));
 
 -- label: dml-book
 -- require superuser access or `pg_read_server_files` role priveleges
 COPY book (id, title, synopsis, isbn, publisher_id, publication_date, genre, language, page_count,
            keywords) FROM '/var/lib/postgresql/assets/book.csv' DELIMITER ',' CSV HEADER;
 -- update id sequence value
-SELECT SETVAL('book_id_seq', (SELECT MAX(id) FROM book));
+SELECT setval('book_id_seq', (SELECT max(id) FROM book));
 
 -- label: dml-book_author
 -- require superuser access or `pg_read_server_files` role priveleges
@@ -771,7 +771,7 @@ COPY book_author FROM '/var/lib/postgresql/assets/book_author.csv' DELIMITER ','
 -- require superuser access or `pg_read_server_files` role priveleges
 COPY revenue FROM '/var/lib/postgresql/assets/revenue.csv' DELIMITER ',' CSV HEADER;
 -- update id sequence value
-SELECT SETVAL('revenue_id_seq', (SELECT MAX(id) FROM revenue));
+SELECT setval('revenue_id_seq', (SELECT max(id) FROM revenue));
 
 -- label: dml-borrow_request
 -- require superuser access or `pg_read_server_files` role priveleges
