@@ -188,6 +188,10 @@ INSERT INTO publisher (id, name, website, email, phone)
 VALUES (2, 'Brainlounge', 'http://php.net', 'bfindlow1@paginegialle.it', '+389 (482) 470-2463');
 INSERT INTO publisher
 VALUES (3, 'Tanoodle', 'http://dyndns.org', 'cfleisch2@scribd.com', '+7 (852) 867-5041');
+/*
+ * queries above demonstrate various ways to *insert* data
+ */
+-- label: repeating insertions...
 INSERT INTO "publisher" ("id", "name", "website", "email", "phone")
 VALUES (4, 'Skivee', 'https://google.co.uk', 'mwhyatt3@guardian.co.uk', '+86 (800) 978-5805');
 INSERT INTO publisher (id, name, website, email, phone)
