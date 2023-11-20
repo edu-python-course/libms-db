@@ -788,9 +788,12 @@ CREATE TEMPORARY TABLE book_author_distinct AS
 SELECT DISTINCT book_id, author_id
 FROM book_author;
 
-TRUNCATE TABLE book_author; -- remove all rows from the "book_author" table
+-- remove all rows from the "book_author" table
+TRUNCATE TABLE book_author;
+
+-- add primary key constraint to "book_author" table
 ALTER TABLE book_author
-    ADD CONSTRAINT book_author_unique UNIQUE (book_id, author_id);
+    ADD PRIMARY KEY (book_id, author_id);
 
 INSERT INTO book_author
 SELECT *
