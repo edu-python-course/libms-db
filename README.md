@@ -142,6 +142,5 @@ Generated datasets are also available at [assets/csv](./assets/csv).
 
 ### UML diagram
 
-```mermaid
-{% include assets/mermaid/structure.mmd %}
-```
+[UML diagram](./assets/mermaid/structure.mmd) is available in assets directory.
+
