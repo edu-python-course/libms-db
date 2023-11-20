@@ -35,8 +35,8 @@ CREATE TABLE author
     last_name  VARCHAR(128) NOT NULL,
     country    VARCHAR(255),
     birthdate  DATE CHECK (birthdate < NOW() - INTERVAL '10 years'),
-    CHECK ( LENGTH(first_name) > 0 ),
-    CHECK ( LENGTH(last_name) > 0 )
+    CHECK (LENGTH(first_name) > 0),
+    CHECK (LENGTH(last_name) > 0)
 );
 
 COMMENT ON TABLE author IS 'authors registered in the library db';
@@ -54,7 +54,7 @@ CREATE TABLE book
     title            VARCHAR(255) NOT NULL,
     synopsis         TEXT,
     isbn             VARCHAR(16),
-    publisher_id     INTEGER      NOT NULL REFERENCES publisher,
+    publisher_id     INTEGER      NOT NULL REFERENCES publisher ON DELETE RESTRICT,
     publication_date DATE,
     language         VARCHAR(64),
     page_count       INTEGER,
@@ -132,7 +132,7 @@ CREATE TABLE member
     last_name  VARCHAR(64) NOT NULL CHECK (LENGTH(last_name) > 0),
     birthdate  DATE,
     registered DATE DEFAULT NOW(),
-    contact_id INTEGER     NOT NULL UNIQUE REFERENCES contact
+    contact_id INTEGER UNIQUE REFERENCES contact
 );
 
 COMMENT ON TABLE member IS 'library registered members';
@@ -141,12 +141,16 @@ COMMENT ON COLUMN member.contact_id IS '1-to-1 relationship to contacts table';
 ALTER TABLE member
     OWNER TO libms;
 
+-- this is the default member to reference, in case actual member is deleted
+INSERT INTO member
+VALUES (0, 'Deleted', 'User', NULL, NULL, NULL);
+
 -- label: ddl-revenue
 CREATE TABLE revenue
 (
     id        SERIAL PRIMARY KEY,
-    member_id INTEGER NOT NULL REFERENCES member,
-    date      DATE    NOT NULL DEFAULT NOW(),
+    member_id INTEGER DEFAULT 0 REFERENCES member ON DELETE SET DEFAULT,
+    date      DATE    DEFAULT NOW(),
     amount    INTEGER NOT NULL CHECK (amount > 0),
     UNIQUE (member_id, date)
 );
@@ -161,9 +165,9 @@ ALTER TABLE revenue
 -- label: ddl-borrow_request
 CREATE TABLE borrow_request
 (
-    book_id       INTEGER NOT NULL REFERENCES book,
-    member_id     INTEGER NOT NULL REFERENCES member,
-    borrow_date   DATE    NOT NULL DEFAULT NOW(),
+    book_id       INTEGER REFERENCES book ON DELETE CASCADE,
+    member_id     INTEGER REFERENCES member ON DELETE SET NULL,
+    borrow_date   DATE             DEFAULT NOW(),
     due_date      DATE    NOT NULL DEFAULT NOW() + INTERVAL '2 weeks',
     complete_date DATE,
     PRIMARY KEY (book_id, member_id, borrow_date)
